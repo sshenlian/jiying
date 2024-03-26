@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.effect.*?>
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.control.Button?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="737.0" prefWidth="950.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.nonesec.Conatroller.UiController">
+   <children>
+      <TabPane layoutX="-1.0" prefHeight="737.0" prefWidth="950.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+            <Tab text="武器库自定义">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <ComboBox fx:id="toolslist" layoutX="17.0" layoutY="21.0" onAction="#initProgramme" onShowing="#initProgramme" prefHeight="32.0" prefWidth="338.0" promptText="选择方案" />
+                        <Button fx:id="addProgrammeBtn" layoutX="844.0" layoutY="23.0" mnemonicParsing="false" onAction="#addProgramme" text="添加方案" />
+                        <Button fx:id="runPrograBtn" layoutX="380.0" layoutY="24.0" mnemonicParsing="false" onAction="#runProgram" text="执行方案" />
+                        <TextArea fx:id="ProgrammelinkText" layoutX="17.0" layoutY="67.0" prefHeight="277.0" prefWidth="917.0" promptText="执行方案的链接" />
+                        <Text layoutX="424.0" layoutY="365.0" strokeType="OUTSIDE" strokeWidth="0.0" text="输出信息" />
+                        <TextArea fx:id="outText" layoutX="17.0" layoutY="369.0" prefHeight="305.0" prefWidth="918.0" promptText="执行结果" style="-fx-background-color: black;" />
+                        <Text fill="RED" layoutX="404.0" layoutY="692.0" strokeType="OUTSIDE" strokeWidth="0.0" text="仅用于安全学习研究" />
+                     </children>
+                  </AnchorPane>
+              </content>
+            </Tab>
+            <Tab text="FOFA引擎">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="589.0" prefWidth="950.0">
+                     <children>
+                        <TableView fx:id="fofaTable" layoutX="12.0" layoutY="46.0" prefHeight="621.0" prefWidth="932.0">
+                          <columns>
+                            <TableColumn fx:id="num" prefWidth="46.0" text="序号" />
+                            <TableColumn fx:id="link" prefWidth="329.0" text="链接" />
+                              <TableColumn fx:id="title" prefWidth="259.0" text="标题" />
+                              <TableColumn fx:id="ip" prefWidth="219.0" text="IP" />
+                          </columns>
+                        </TableView>
+                        <Button fx:id="apiSet" layoutX="719.0" layoutY="7.0" mnemonicParsing="false" onAction="#api_setting" text="配置API" />
+                        <Button fx:id="searchBtn" layoutX="408.0" layoutY="7.0" mnemonicParsing="false" onAction="#search" text="搜索" />
+                        <TextField fx:id="fofaSyntax" layoutX="75.0" layoutY="7.0" prefHeight="27.0" prefWidth="317.0" />
+                        <Text layoutX="12.0" layoutY="25.0" strokeType="OUTSIDE" strokeWidth="0.0" text="FOFA语法" />
+                        <Text fx:id="statusText" fill="RED" layoutX="488.0" layoutY="25.0" strokeType="OUTSIDE" strokeWidth="0.0" />
+                        <Button fx:id="Export" layoutX="637.0" layoutY="7.0" mnemonicParsing="false" onAction="#ExportBtn" text="导出资产" />
+                        <Text fill="RED" layoutX="394.0" layoutY="689.0" strokeType="OUTSIDE" strokeWidth="0.0" text="仅用于安全学习研究" />
+                     </children>
+                  </AnchorPane>
+              </content>
+            </Tab>
+            <Tab text="弱口令生成">
+               <content>
+                   <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="652.0" prefWidth="992.0">
+                      <children>
+                          <TextArea fx:id="UsernameTextArea" layoutX="14.0" layoutY="25.0" prefHeight="641.0" prefWidth="375.0" promptText="用户名" />
+                          <TextArea fx:id="PasswordTextArea" layoutX="525.0" layoutY="23.0" prefHeight="644.0" prefWidth="405.0" />
+                          <Button fx:id="PasswordInitBtn" layoutX="418.0" layoutY="319.0" mnemonicParsing="false" onAction="#initPasswordBtn" prefHeight="27.0" prefWidth="77.0" text="字典生成" />
+                        <Text fill="RED" layoutX="398.0" layoutY="692.0" strokeType="OUTSIDE" strokeWidth="0.0" text="仅用于安全学习研究" />
+                      </children>
+                   </AnchorPane>
+               </content>
+            </Tab>
+            <Tab text="编码解码">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="466.0" prefWidth="795.0">
+                     <children>
+                        <TextArea fx:id="EncodeTextArea1" layoutX="14.0" layoutY="32.0" prefHeight="634.0" prefWidth="371.0" promptText="未编码的字符串" />
+                        <TextArea fx:id="DecodeTextArea1" layoutX="532.0" layoutY="29.0" prefHeight="640.0" prefWidth="401.0" promptText="编码后的字符串" />
+                        <Button fx:id="EncodeBtn" layoutX="418.0" layoutY="260.0" mnemonicParsing="false" onAction="#EncodeBtn" prefHeight="27.0" prefWidth="77.0" text="编码" />
+                        <Text fill="RED" layoutX="397.0" layoutY="688.0" strokeType="OUTSIDE" strokeWidth="0.0" text="仅用于安全学习研究" />
+                        <ComboBox fx:id="DecodeComboBox" layoutX="406.0" layoutY="182.0" prefHeight="28.0" prefWidth="101.0" promptText="编码方式" AnchorPane.topAnchor="182.0" />
+                        <Button fx:id="DecodeBtn" layoutX="418.0" layoutY="329.0" mnemonicParsing="false" onAction="#DecodeBtn" prefHeight="27.0" prefWidth="77.0" text="解码" />
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+            <Tab text="文本去重">
+               <content>
+                   <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TextArea fx:id="DeduplicationResultTextArea" layoutX="524.0" layoutY="22.0" prefHeight="643.0" prefWidth="407.0" />
+                        <TextArea fx:id="DeduplicationTextArea" layoutX="14.0" layoutY="25.0" prefHeight="637.0" prefWidth="374.0" promptText="去重文本" />
+                        <Button fx:id="DeduplicationBnt" layoutX="418.0" layoutY="315.0" mnemonicParsing="false" onAction="#DeduplicationTextBtn" prefHeight="27.0" prefWidth="77.0" text="去重" />
+                        <Text fill="RED" layoutX="398.0" layoutY="686.0" strokeType="OUTSIDE" strokeWidth="0.0" text="仅用于安全学习研究" />
+                     </children></AnchorPane>
+               </content>
+            </Tab>
+        </tabs>
+      </TabPane>
+   </children>
+</Pane>

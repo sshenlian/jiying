@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="325.0" prefWidth="426.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.nonesec.FOFA.FOFAUI">
+   <children>
+      <TextField fx:id="fofaUser" layoutX="161.0" layoutY="96.0" prefHeight="27.0" prefWidth="186.0" />
+      <TextField fx:id="fofaAPI" layoutX="161.0" layoutY="147.0" prefHeight="27.0" prefWidth="186.0" />
+      <Button fx:id="fofasavebtn" layoutX="178.0" layoutY="202.0" mnemonicParsing="false" onAction="#fofaSave" text="保存配置" />
+      <Text layoutX="80.0" layoutY="114.0" strokeType="OUTSIDE" strokeWidth="0.0" text="FOFA账号" />
+      <Text layoutX="85.0" layoutY="165.0" strokeType="OUTSIDE" strokeWidth="0.0" text="API-KEY" />
+   </children>
+</Pane>

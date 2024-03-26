@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="291.0" prefWidth="479.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.nonesec.Conatroller.ProgrammeUIController">
+   <children>
+      <Text layoutX="111.0" layoutY="68.0" strokeType="OUTSIDE" strokeWidth="0.0" text="提示:  /Users/test/Download/httpx  -u {link} -mc 200" />
+      <TextField fx:id="pargraText" layoutX="122.0" layoutY="176.0" prefHeight="27.0" prefWidth="260.0" />
+      <Button fx:id="savebtn" layoutX="205.0" layoutY="216.0" mnemonicParsing="false" onAction="#savefile" text="保存方案" />
+      <Text layoutX="50.0" layoutY="194.0" strokeType="OUTSIDE" strokeWidth="0.0" text="方案配置" />
+      <Text layoutX="150.0" layoutY="101.0" strokeType="OUTSIDE" strokeWidth="0.0" text="java -jar /Users/text/Download/test.jar" />
+      <Text layoutX="50.0" layoutY="150.0" strokeType="OUTSIDE" strokeWidth="0.0" text="方案名称" />
+      <TextField fx:id="pargraNameText" layoutX="122.0" layoutY="132.0" prefHeight="27.0" prefWidth="260.0" />
+   </children>
+</AnchorPane>
